@@ -18,14 +18,16 @@ ActiveRecord::Schema.define(version: 2018_09_14_192233) do
   create_table "ayahs", force: :cascade do |t|
     t.string "ayah_key"
     t.text "text"
+    t.text "text_html"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bookmarks", force: :cascade do |t|
-    t.string "ayah_key"
+    t.integer "ayah_id"
     t.text "text"
     t.string "tags"
+    t.text "text_html"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
